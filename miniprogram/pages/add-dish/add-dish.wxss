@@ -1,0 +1,4 @@
+/* miniprogram/pages/add-dish/add-dish.wxss */
+.weui-input {
+  padding-left: 20rpx;
+}

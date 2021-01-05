@@ -1,0 +1,82 @@
+/* miniprogram/pages/dish-info/dish-info.wxss */
+.main {
+  padding: 30rpx;
+}
+
+image {
+  width: 100%;
+}
+
+.img-dishName {
+  height: 390rpx;
+  display: inline-block;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.img-dishDesc {
+  height: 276rpx;
+  margin-bottom: 20rpx;
+}
+
+.btn-group {
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.btn-group view {
+  display: inline-block;
+  width: 130rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  border-radius: 32rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  color: #333333;
+}
+
+.yesBtn {
+  background: #F7B500;
+  margin-right: 48rpx;
+}
+
+.noBtn {
+  box-sizing: border-box;
+  border: 1px solid #999999;
+  box-shadow: 0 0 8rpx 0 rgba(0,0,0,0.00);
+}
+
+.action text {
+  display: inline-block;
+  /* vertical-align: top; */
+  width: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+}
+
+
+.cut,.buy-num,.add {
+  border: 1rpx solid #DDDDDD;
+}
+
+.cut,.add {
+  background: #F8F8F8;
+}
+
+.cut {
+  border-radius: 4rpx 0 0 4rpx;
+}
+
+.add {
+  border-radius: 0 4rpx 4rpx 0;
+}
+
+.buy-num {
+  border-left: none;
+  border-right: none;
+}
+
+.weui-cell {
+  padding: 24rpx 32rpx !important;
+}

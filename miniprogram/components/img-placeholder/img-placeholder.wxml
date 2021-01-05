@@ -1,0 +1,16 @@
+<!--components/img-placeholder/img-placeholder.wxml-->
+<block>
+  <image
+    class="{{ showReal ? 'hide' : 'show'}}"
+    style="width: {{imgWidth}}; height: {{imgHeight}}"
+    src="https://fakeimg.pl/350x200/ECEDEE/?text=loading&font=lobster"
+  >
+  </image>
+  <image
+    class="{{ showReal ? 'show' : 'hide'}}"
+    style="width: {{imgWidth}}rpx; height: {{imgHeight}}"
+    src="{{imgUrl}}"
+    bindload="imgLoadComplete"
+  >
+  </image>
+</block>

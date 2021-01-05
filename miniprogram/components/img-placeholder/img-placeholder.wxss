@@ -1,0 +1,9 @@
+/* components/img-placeholder/img-placeholder.wxss */
+.hide {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.show {
+  opacity: 1;
+}

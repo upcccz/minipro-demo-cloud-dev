@@ -1,0 +1,16 @@
+/* miniprogram/pages/success-tip/success-tip.wxss */
+page, .main {
+  height: 100%;
+}
+
+.main {
+  padding: 30rpx;
+  text-align: center;
+}
+
+.pay {
+  width: 500rpx;
+  height: 688rpx;
+  margin: 0 auto;
+  margin-bottom: 50rpx;
+}

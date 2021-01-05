@@ -1,0 +1,14 @@
+<!--miniprogram/pages/bills/bills.wxml-->
+<view class="main">
+  <mp-cells title="订单信息">
+    <mp-cell value="菜名" footer="{{billInfo.dishName || ''}}"></mp-cell>
+    <mp-cell value="购买数量" footer="{{buyNum || ''}}"></mp-cell>
+    <mp-cell value="总金额" footer="{{billInfo.totalMoney || ''}}"></mp-cell>
+    <mp-cell value="当前参与人数" footer="{{billInfo.peopleNum || ''}}"></mp-cell>
+    <mp-cell value="人均金额" footer="{{billInfo.averagePrice || ''}}"></mp-cell>
+    <mp-cell value="人均节省" footer="{{billInfo.averageJs || ''}}"></mp-cell>
+
+  </mp-cells>
+
+  <button class="weui-btn" type="primary" bindtap="toPay">去付款</button>
+</view>

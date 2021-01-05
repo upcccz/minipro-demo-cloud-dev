@@ -1,0 +1,61 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="main">
+  <!-- <button class="weui-btn" type="primary" bindtap="toAdd">新增菜品</button> -->
+
+  <view class="header">
+    <mp-icon icon="location" color="black" size="{{20}}" ext-class="location"></mp-icon>
+    <text>雅枫国际酒店</text>
+    <mp-icon icon="arrow" color="#333333" size="{{10}}" ext-class="arrow"></mp-icon>
+  </view>
+
+  <view class="search-wrap">
+    <mp-searchbar bindselectresult="selectResult" search="{{search}}" placeholder="奶茶" ext-class="c-search"></mp-searchbar>
+  </view>
+
+  <view class="swiper">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" circular="{{true}}" indicator-color="rgba(0, 0, 0, .1)" indicator-active-color="rgba(0, 0, 0, .3)">
+      <block wx:for="{{bannerImg}}" wx:key="index" wx:for-item="imgItem">
+        <swiper-item>
+          <view class="swiper-item {{item}}">
+            {{imgItem.name}}
+            <image src="{{imgItem.url}}"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="nav-wrap">
+    <block wx:for="{{navArr}}" wx:for-item="item" wx:key="i_index" wx:for-index="index">
+      <view class="nav-icon-text" data-index="{{index}}">
+        <image src="{{'/images/nav-icon' + (index + 1) + '.png' }}"></image>
+        <view>{{ item }}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="mid-banner">
+    <image src="/images/middle-banner.png"></image>
+  </view>
+
+  <view class="show-dish">
+    <view class="img-wrap" wx:for="{{imgData.length ? imgData: 4}}" wx:for-item="imgItem" wx:key="index" bindtap="toDetails" data-id="{{imgItem._id}}">
+      <img-placeholder imgWidth="100%" imgHeight="256rpx" imgUrl="{{imgItem.fileIds[0]}}"></img-placeholder>
+      <view class="show-name">
+        <view class="cont">{{imgItem.dishName}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer" wx:if="{{loadingMore}}">
+    <view>加载中 <mp-icon icon="refresh" color="#999999" size="{{14}}" ext-class="load-more-icon"></mp-icon></view>
+  </view>
+
+  <view class="footer" wx:if="{{!loadingMore && !loadingComplete}}">
+    <view>上拉加载更多</view>
+  </view>
+
+  <view wx:if="{{loadingComplete}}" class="footer">
+    <view>我是有底线的</view>
+  </view>
+</view>

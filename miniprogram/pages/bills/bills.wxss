@@ -1,0 +1,14 @@
+/* miniprogram/pages/bills/bills.wxss */
+
+.main {
+  padding: 40rpx;
+}
+
+.main .weui-cell:first-child {
+  border-radius: 10rpx 10rpx 0 0;
+  overflow: hidden;
+}
+
+.weui-btn {
+  margin-top: 40rpx;
+}

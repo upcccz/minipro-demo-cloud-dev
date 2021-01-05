@@ -1,0 +1,10 @@
+<!--miniprogram/pages/success-tip/success-tip.wxml-->
+<view class="main">
+  <!-- <mp-msg type="success" title="付款成功">
+    <view slot="extend">
+      <button class="weui-btn" type="primary" bindtap="toIndex">返回首页</button>
+    </view>
+  </mp-msg> -->
+  <image src="/images/pay2.jpeg" class="pay"></image>
+  <button class="weui-btn" type="primary" bindtap="toIndex">返回首页</button>
+</view>

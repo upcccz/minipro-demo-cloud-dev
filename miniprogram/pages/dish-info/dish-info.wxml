@@ -1,0 +1,28 @@
+<!--miniprogram/pages/dish-info/dish-info.wxml-->
+<view class="main">
+  <image class="img-dishName" src="{{dishInfo.fileIds[0]}}"></image>
+  <image class="img-dishDesc" src="{{dishInfo.fileIds[1]}}"></image>
+
+  <mp-cells class="show-options">
+    <mp-cell>
+      <view>购买数量</view>
+      <view slot="footer" class="action">
+        <!-- <view class="cut" bindtap="handleBuyNum" data-action="cut">-</view>
+        <view class="buy-num">{{buyNum}}</view>
+        <view class="add" bindtap="handleBuyNum" data-action="add">+</view> -->
+        <text class="cut" bindtap="handleBuyNum" data-action="cut">-</text>
+        <text class="buy-num">{{buyNum}}</text>
+        <text class="add" bindtap="handleBuyNum" data-action="add">+</text>
+      </view>
+    </mp-cell>
+    <mp-cell value="当前参与人数" footer="{{ orderData.peopleNum || '0' }}"></mp-cell>
+    <mp-cell value="人均金额" footer="{{orderData.averagePrice || dishInfo.dishPrice || '--' }}元"></mp-cell>
+    <mp-cell value="人均节省" footer="{{ orderData.averageJs || 5 }}元"></mp-cell>
+    <mp-cell value="截止时间" footer="10:30:00"></mp-cell>
+  </mp-cells>
+
+  <view class="btn-group">
+    <view class="yesBtn" bindtap="handleDo">恰</view>
+    <view class="noBtn" bindtap="handleNO">不恰</view>
+  </view>
+</view>

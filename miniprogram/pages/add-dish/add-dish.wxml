@@ -1,0 +1,33 @@
+<!--miniprogram/pages/add-dish/add-dish.wxml-->
+<mp-cells title="新增菜品">
+  <mp-cell title="菜名">
+    <input data-field="dishName" class="weui-input" placeholder="请输入菜名" bindinput="formInputChange" />
+  </mp-cell>
+
+  <mp-cell title="人均金额">
+    <input data-field="dishPrice" class="weui-input" placeholder="请设定价格" bindinput="formInputChange" />
+  </mp-cell>
+
+  <mp-cell title="优惠折扣">
+    <input data-field="dishDesc" class="weui-input" placeholder="请输入简短描述" bindinput="formInputChange" />
+  </mp-cell>
+  
+  <mp-cell>
+    <mp-uploader
+      bindfail="uploadError"
+      bindsuccess="uploadSuccess"
+      select="{{selectFile}}"
+      upload="{{uploadFile}}"
+      files="{{files}}"
+      max-count="2"
+      title="菜品图片上传"
+      delete
+      binddelete="deleteFile"
+      tips="第1张为菜品图片，第2张为描述图片，点击打开图片可删除"
+    ></mp-uploader>
+  </mp-cell>
+</mp-cells>
+
+<view class="weui-btn-area">
+  <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+</view>
